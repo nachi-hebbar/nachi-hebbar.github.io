@@ -15,8 +15,10 @@
 
 <body>
 
+
 <!-- ***** Header ***** -->
 <header class="header" role="banner" id="top">
+    <div id="particles-js"></div> <!-- Animation container -->
     <div class="row">
         <nav class="nav" role="navigation">
             <ul class="nav__items">
@@ -25,6 +27,8 @@
                 <li class="nav__item"><a href="#evangelism" class="nav__link">Evangelism</a></li>
                 <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                 <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                <li class="nav__item"><a href="#timeline" class="nav__link">Timeline</a></li>
+
             </ul>
         </nav>
     </div>
@@ -39,7 +43,71 @@
     </div>
 </header>
 
+
 <main role="main">
+    <!-- ****** Timeline -->
+
+    <!-- Timeline Section -->
+    <section class="timeline-container" id="timeline">
+        <h2>My Journey</h2>
+        <div class="timeline">
+            <!-- VIT -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2017 - 2021</div>
+                <div class="timeline-title" onclick="toggleTimeline(this)">VIT (B.Tech in Computer Science)</div>
+                <div class="timeline-content">
+                    <p>Graduated with a focus on AI and ML. Key projects include IoT-based freshness detection and CT scan diagnosis using deep learning.</p>
+                    <a href="https://scholar.google.com/citations?hl=en&user=7ba_pt8AAAAJ" target="_blank" class="btn">View Publications</a>
+                </div>
+            </div>
+
+            <!-- YouTube -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2019</div>
+                <div class="timeline-title" onclick="toggleTimeline(this)">YouTube Channel Launched</div>
+                <div class="timeline-content">
+                    <p>Grew to 26.5K+ subscribers and over 2M views, creating engaging ML content.</p>
+                    <a href="https://youtube.com/NachiketaHebbar" target="_blank" class="btn">Visit YouTube Channel</a>
+                </div>
+            </div>
+
+            <!-- Awiros -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2021 - 2023</div>
+                <div class="timeline-title" onclick="toggleTimeline(this)">Awiros (AI Engineer)</div>
+                <div class="timeline-content">
+                    <p>Optimized real-time facial recognition, deployed object detection pipelines, and improved model efficiency for edge devices.</p>
+                    <a href="https://github.com/nachiketah/awiros-projects" target="_blank" class="btn">View Projects</a>
+                </div>
+            </div>
+
+            <!-- CMU Master's Program -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2023</div>
+                <div class="timeline-title" onclick="toggleTimeline(this)">CMU Master’s Program</div>
+                <div class="timeline-content">
+                    <p>Specialized in Generative AI, NLP, and Recommendation Systems. Worked on latent diffusion models and Secondary DAO capstone.</p>
+                    <a href="https://cmu.edu" target="_blank" class="btn">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Superkind -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2024 Summer</div>
+                <div class="timeline-title" onclick="toggleTimeline(this)">Superkind (ML Intern)</div>
+                <div class="timeline-content">
+                    <p>Built an NLP-based chatbot, improving response accuracy by 40%, and designed recommendation models, boosting engagement by 15%.</p>
+                    <a href="https://github.com/nachiketah/superkind-projects" target="_blank" class="btn">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- ***** Work ***** -->
     <section class="work" id="work">
@@ -210,6 +278,9 @@
 <a href="#top" class="back-to-top" title="Back to Top">
     <img src="./images/arrow-up.svg" alt="Back to Top">
 </a>
+
+<script src="./particles.min.js"></script>
+
 <script src="./index.js"></script>
 </body>
 </html>

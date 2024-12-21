@@ -403,10 +403,13 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Header ----- */
 /* --------------------------------------- */
 
-.header {
-    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)),
-    url('./images/header.jpg');
-    height: 100vh;
+    .header {
+        /* background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)),
+        url('./images/header.jpg'); */
+
+        position: relative;
+        height: 100vh; /* Full viewport height */
+        background: none; /* If you want to remove the background */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -704,4 +707,145 @@ body:not(.user-is-tabbing) a:focus {
     background: #e0544e;
 }
 
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* background: transparent; */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)); /* Semi-transparent overlay */
+}
 
+/* Timeline Container */
+.timeline-container {
+    padding: 50px 20px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.timeline-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ff5e57;
+}
+
+/* Timeline */
+.timeline {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.timeline-item {
+    flex: 0 0 auto;
+    width: 200px;
+    text-align: left;
+}
+
+.timeline-date {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.timeline-dot {
+    height: 10px;
+    width: 10px;
+    background-color: #ff5e57;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.timeline-content {
+    display: none; /* Hide by default */
+    margin-top: 10px;
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+.timeline-content .btn {
+    margin-top: 10px;
+    display: inline-block;
+    background: #ff5e57;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s;
+    font-size: 0.9rem; /* Smaller font size */
+    padding: 6px 12px; /* Adjust padding */
+    border-radius: 4px; /* Slightly rounded corners */
+}
+
+.timeline-content .btn:hover {
+    background: #e0544e;
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .timeline-date {
+        font-size: 1rem;
+    }
+
+    .timeline-content {
+        padding: 10px;
+    }
+}
+/* Timeline Connecting Lines */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 15px; /* Align with dots */
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #ff5e57; /* Red line color */
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    z-index: 2; /* Ensure dots/cards are above the line */
+}
+
+.timeline-dot {
+    position: relative;
+    z-index: 3; /* Ensure dots are above the line */
+}
+
+.timeline-title {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #ff5e57; /* Red for clickable text */
+    transition: color 0.2s ease-in-out;
+}
+
+.timeline-title:hover {
+    color: #e0544e; /* Darker red on hover */
+}
