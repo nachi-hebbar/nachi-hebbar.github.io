@@ -22,7 +22,8 @@
     <div class="row">
         <nav class="nav" role="navigation">
             <ul class="nav__items">
-                <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+              <!--  <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                -->
                 <li class="nav__item"><a href="#research" class="nav__link">Research</a></li>
                 <li class="nav__item"><a href="#evangelism" class="nav__link">Evangelism</a></li>
                 <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
@@ -45,71 +46,57 @@
 
 
 <main role="main">
-    <!-- ****** Timeline -->
+    <!--
 
-    <!-- Timeline Section -->
-    <section class="timeline-container" id="timeline">
-        <h2>My Journey</h2>
-        <div class="timeline">
-            <!-- VIT -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2017 - 2021</div>
-                <div class="timeline-title" onclick="toggleTimeline(this)">VIT (B.Tech in Computer Science)</div>
-                <div class="timeline-content">
+    <section class="timeline-container">
+        <h2 class="timeline-heading">My Journey</h2>
+        <div class="timeline-wrapper">
+
+            <div class="timeline">
+                <div class="timeline-year" data-year="2017 - 2021">2017 - 2021</div>
+                <div class="timeline-year" data-year="2019">2019</div>
+                <div class="timeline-year" data-year="2021 - 2023">2021 - 2023</div>
+                <div class="timeline-year" data-year="2023">2023</div>
+                <div class="timeline-year" data-year="2024 Summer">2024 Summer</div>
+            </div>
+
+
+            <div class="timeline-details">
+                <div class="timeline-detail" data-year="2017 - 2021">
+                    <h3>2017 - 2021</h3>
+                    <p><strong>VIT (B.Tech in Computer Science)</strong></p>
                     <p>Graduated with a focus on AI and ML. Key projects include IoT-based freshness detection and CT scan diagnosis using deep learning.</p>
-                    <a href="https://scholar.google.com/citations?hl=en&user=7ba_pt8AAAAJ" target="_blank" class="btn">View Publications</a>
                 </div>
-            </div>
-
-            <!-- YouTube -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2019</div>
-                <div class="timeline-title" onclick="toggleTimeline(this)">YouTube Channel Launched</div>
-                <div class="timeline-content">
+                <div class="timeline-detail" data-year="2019">
+                    <h3>2019</h3>
+                    <p><strong>YouTube Channel Launched</strong></p>
                     <p>Grew to 26.5K+ subscribers and over 2M views, creating engaging ML content.</p>
-                    <a href="https://youtube.com/NachiketaHebbar" target="_blank" class="btn">Visit YouTube Channel</a>
                 </div>
-            </div>
-
-            <!-- Awiros -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2021 - 2023</div>
-                <div class="timeline-title" onclick="toggleTimeline(this)">Awiros (AI Engineer)</div>
-                <div class="timeline-content">
+                <div class="timeline-detail" data-year="2021 - 2023">
+                    <h3>2021 - 2023</h3>
+                    <p><strong>Awiros (AI Engineer)</strong></p>
                     <p>Optimized real-time facial recognition, deployed object detection pipelines, and improved model efficiency for edge devices.</p>
-                    <a href="https://github.com/nachiketah/awiros-projects" target="_blank" class="btn">View Projects</a>
                 </div>
-            </div>
-
-            <!-- CMU Master's Program -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2023</div>
-                <div class="timeline-title" onclick="toggleTimeline(this)">CMU Master’s Program</div>
-                <div class="timeline-content">
+                <div class="timeline-detail" data-year="2023">
+                    <h3>2023</h3>
+                    <p><strong>CMU Master’s Program</strong></p>
                     <p>Specialized in Generative AI, NLP, and Recommendation Systems. Worked on latent diffusion models and Secondary DAO capstone.</p>
-                    <a href="https://cmu.edu" target="_blank" class="btn">Learn More</a>
                 </div>
-            </div>
-
-            <!-- Superkind -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2024 Summer</div>
-                <div class="timeline-title" onclick="toggleTimeline(this)">Superkind (ML Intern)</div>
-                <div class="timeline-content">
+                <div class="timeline-detail" data-year="2024 Summer">
+                    <h3>2024 Summer</h3>
+                    <p><strong>Superkind (ML Intern)</strong></p>
                     <p>Built an NLP-based chatbot, improving response accuracy by 40%, and designed recommendation models, boosting engagement by 15%.</p>
-                    <a href="https://github.com/nachiketah/superkind-projects" target="_blank" class="btn">View Project</a>
                 </div>
             </div>
         </div>
     </section>
+    -->
 
 
-    <!-- ***** Work ***** -->
+
+
+    <!-- ***** Work *****
+
     <section class="work" id="work">
         <div class="row">
             <h2>My Work</h2>
@@ -159,7 +146,7 @@
             </div>
         </div>
     </section>
-
+-->
     <!-- ***** Research ***** -->
     <section class="research" id="research">
         <div class="row">
@@ -202,14 +189,14 @@
     <!-- ***** Developer Evangelism ***** -->
     <section class="developer-evangelism" id="evangelism">
         <div class="row">
-            <h2>Developer Evangelism & Knowledge Sharing</h2>
+            <h2>Teaching & Developer Evangelism</h2>
             <div class="metrics">
                 <div class="metric">
                     <h3>26.5K+</h3>
                     <p>YouTube Subscribers</p>
                 </div>
                 <div class="metric">
-                    <h3>100K+</h3>
+                    <h3>2M+</h3>
                     <p>Total Video Views</p>
                 </div>
                 <div class="metric">
@@ -217,7 +204,7 @@
                     <p>Medium Article Reads</p>
                 </div>
                 <div class="metric">
-                    <h3>50+</h3>
+                    <h3>450+</h3>
                     <p>GitHub Stars</p>
                 </div>
             </div>
@@ -226,26 +213,34 @@
                 <div class="video-carousel">
                     <div class="video">
                         <iframe src="https://www.youtube.com/embed/tSlcORgDJuY" frameborder="0" allowfullscreen></iframe>
-                        <p>Image Retrieval with Text</p>
+                        <p>Building an image search engine with CLIP</p>
                     </div>
                     <div class="video">
                         <iframe src="https://www.youtube.com/embed/S8tpSG6Q2H0" frameborder="0" allowfullscreen></iframe>
-                        <p>K-Fold Cross Validation</p>
+                        <p>Time Series Forecasting with LSTMs</p>
                     </div>
                     <div class="video">
                         <iframe src="https://www.youtube.com/embed/XvGfrXsu76A" frameborder="0" allowfullscreen></iframe>
-                        <p>Auto Code Completion Chatbot</p>
+                        <p>Building Agents with Langchain</p>
                     </div>
                     <div class="video">
                         <iframe src="https://www.youtube.com/embed/JcU72smpLJk" frameborder="0" allowfullscreen></iframe>
-                        <p>LangChain Simplified</p>
+                        <p>Transfer Learning With Keras</p>
+                    </div>
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/ti_PCvND4gM" frameborder="0" allowfullscreen></iframe>
+                        <p>Training GANs in Tensorflow</p>
+                    </div>
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/WyAZ97igZxA" frameborder="0" allowfullscreen></iframe>
+                        <p>Gradient Descent with Momentum Explained</p>
                     </div>
                 </div>
             </div>
             <div class="cta">
                 <a href="https://youtube.com/NachiketaHebbar" target="_blank" class="btn">Visit YouTube Channel</a>
-                <a href="https://medium.com/@yourprofile" target="_blank" class="btn">Read Medium Articles</a>
-                <a href="https://github.com/nachiketah" target="_blank" class="btn">View GitHub Repos</a>
+                <a href="https://medium.com/@nachihebbar" target="_blank" class="btn">Read Medium Articles</a>
+                <a href="https://github.com/nachi-hebbar" target="_blank" class="btn">View GitHub</a>
             </div>
         </div>
     </section>

@@ -577,53 +577,60 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 /* ----- Footer ----- */
 /* --------------------------------------- */
-
 .footer {
     text-align: center;
     padding: var(--gutter-medium) 0 var(--gutter-normal);
+    background-color: var(--black); /* Dark background */
+    color: var(--white-1); /* Consistent text color */
 }
 
 .footer__social-links {
     display: flex;
     justify-content: center;
+    gap: var(--gutter-small);
     padding: var(--gutter-normal) 0;
     list-style: none;
 }
 
-.footer__social-link-item:not(:last-of-type) {
-    margin-right: var(--gutter-small);
+.footer__social-links li {
+    margin: 0;
 }
 
-.footer__social-image {
-    height: 4rem;
+.footer__social-links a {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.2s;
 }
 
-.footer__github-buttons {
-    display: flex;
-    justify-content: center;
+.footer__social-links img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(80%); /* Make all icons uniform */
+    transition: filter 0.3s ease, transform 0.2s ease;
 }
 
-.footer__github-buttons iframe {
-    height: 2.5rem;
-    width: 84px;
-    transform: translateY(3px);
+.footer__social-links img:hover {
+    filter: grayscale(0%) brightness(100%) invert(0); /* Remove dullness on hover */
+    transform: scale(1.2); /* Add a zoom effect */
 }
 
-@media(max-width: 500px) {
-    .footer {
-        padding: var(--gutter-medium) 0;
-    }
+.footer p {
+    margin-top: var(--gutter-small);
+    font-size: 1.4rem;
+    color: var(--white-1);
 }
+
 
 .developer-evangelism {
-    padding: 50px 20px;
-    background-color: #f9f9f9; /* Light background for the section */
+    padding: 5px 2px;
+    background-color: #000; /* Light background for the section */
     text-align: center;
 }
 
 .developer-evangelism h2,
 .developer-evangelism h3 {
-    color: #333;
+    color: var(--white); /* Use the defined white color variable */
     font-size: 2rem;
     text-align: center;
     margin-bottom: 20px;
@@ -637,22 +644,24 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .developer-evangelism .metric {
-    background: #fff;
+    background: #111; /* Slightly lighter than black for contrast */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     width: 150px;
+    color: var(--white-1); /* Use the site's color variable */
 }
+
 
 .developer-evangelism .metric h3 {
     font-size: 2rem;
-    color: #ff5e57;
+    color: var(--pink); /* Use the defined pink color variable */
     margin-bottom: 10px;
 }
 
 .developer-evangelism .metric p {
-    font-size: 1rem;
-    color: #555;
+    font-size: 1.4rem;
+    color: var(--white-1);
 }
 
 .developer-evangelism .video-wall {
@@ -666,6 +675,19 @@ body:not(.user-is-tabbing) a:focus {
     padding-bottom: 10px;
 }
 
+.developer-evangelism .video-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.developer-evangelism .video-carousel::-webkit-scrollbar-thumb {
+    background: var(--pink); /* Matches the theme */
+    border-radius: 10px;
+}
+
+.developer-evangelism .video-carousel::-webkit-scrollbar-track {
+    background: #222; /* Subtle background for scrollbar */
+}
+
 .developer-evangelism .video {
     flex: 0 0 auto;
     width: 300px;
@@ -674,11 +696,9 @@ body:not(.user-is-tabbing) a:focus {
 
 .developer-evangelism .video p {
 
-        color: #333; /* Dark color for visibility */
-        font-size: 1rem; /* Adjust as needed */
-        margin-top: 5px;
-        text-align: center;
-
+    color: var(--white-1); /* Ensure consistent text color */
+    font-size: 1.4rem;
+    margin-top: 5px;
 }
 
 .developer-evangelism .video iframe {
@@ -694,17 +714,18 @@ body:not(.user-is-tabbing) a:focus {
 
 .developer-evangelism .cta .btn {
     display: inline-block;
-    background: #ff5e57;
-    color: #fff;
+    background: var(--pink); /* Use the defined pink color */
+    color: var(--white);
     padding: 10px 20px;
     margin: 5px;
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s;
+    font-size: 1.6rem;
 }
 
 .developer-evangelism .cta .btn:hover {
-    background: #e0544e;
+    background: #e0544e; /* Slightly darker shade for hover */
 }
 
 #particles-js {
@@ -719,133 +740,5 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* Timeline Container */
-.timeline-container {
-    padding: 50px 20px;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-}
-
-.timeline-container h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #ff5e57;
-}
 
 /* Timeline */
-.timeline {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 30px;
-    margin-top: 20px;
-    position: relative;
-}
-
-.timeline-item {
-    flex: 0 0 auto;
-    width: 200px;
-    text-align: left;
-}
-
-.timeline-date {
-    font-size: 1.2rem;
-    color: #888;
-    margin-bottom: 5px;
-}
-
-.timeline-dot {
-    height: 10px;
-    width: 10px;
-    background-color: #ff5e57;
-    border-radius: 50%;
-    margin: 10px auto;
-}
-
-.timeline-content {
-    display: none; /* Hide by default */
-    margin-top: 10px;
-    background: #1a1a1a;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.timeline-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.timeline-content p {
-    font-size: 1rem;
-    color: #aaa;
-}
-
-.timeline-content .btn {
-    margin-top: 10px;
-    display: inline-block;
-    background: #ff5e57;
-    color: #fff;
-    text-decoration: none;
-    transition: background 0.3s;
-    font-size: 0.9rem; /* Smaller font size */
-    padding: 6px 12px; /* Adjust padding */
-    border-radius: 4px; /* Slightly rounded corners */
-}
-
-.timeline-content .btn:hover {
-    background: #e0544e;
-}
-
-@media (max-width: 768px) {
-    .timeline {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .timeline-item {
-        width: 100%;
-        text-align: center;
-    }
-
-    .timeline-date {
-        font-size: 1rem;
-    }
-
-    .timeline-content {
-        padding: 10px;
-    }
-}
-/* Timeline Connecting Lines */
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 15px; /* Align with dots */
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: #ff5e57; /* Red line color */
-    z-index: 1;
-}
-
-.timeline-item {
-    position: relative;
-    z-index: 2; /* Ensure dots/cards are above the line */
-}
-
-.timeline-dot {
-    position: relative;
-    z-index: 3; /* Ensure dots are above the line */
-}
-
-.timeline-title {
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: #ff5e57; /* Red for clickable text */
-    transition: color 0.2s ease-in-out;
-}
-
-.timeline-title:hover {
-    color: #e0544e; /* Darker red on hover */
-}
