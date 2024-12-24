@@ -644,24 +644,24 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .developer-evangelism .metric {
-    background: #111; /* Slightly lighter than black for contrast */
+    background: #FFFFF0; /* Slightly lighter than black for contrast */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     width: 150px;
-    color: var(--white-1); /* Use the site's color variable */
+    color: #000000; /* Use the site's color variable */
 }
 
 
 .developer-evangelism .metric h3 {
     font-size: 2rem;
-    color: var(--pink); /* Use the defined pink color variable */
+    color: #ff3258; /* Use the defined pink color variable */
     margin-bottom: 10px;
 }
 
 .developer-evangelism .metric p {
     font-size: 1.4rem;
-    color: var(--white-1);
+    color: #000000; /* Black text for the labels */
 }
 
 .developer-evangelism .video-wall {
@@ -680,12 +680,13 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .developer-evangelism .video-carousel::-webkit-scrollbar-thumb {
-    background: var(--pink); /* Matches the theme */
-    border-radius: 10px;
+    background: #ff3258; /* Bright red for the scrollbar thumb */
+    border-radius: 5px; /* Rounded edges for the thumb */
 }
 
 .developer-evangelism .video-carousel::-webkit-scrollbar-track {
-    background: #222; /* Subtle background for scrollbar */
+    background:  #F5F5F5; /* Darker background to contrast with the scrollbar thumb */
+    border-radius: 5px; /* Rounded edges for a smoother appearance */
 }
 
 .developer-evangelism .video {
