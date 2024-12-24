@@ -831,3 +831,58 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
+/* Contact */
+
+.contact-section {
+    padding: var(--gutter-huge) 0;
+    text-align: center;
+    color: var(--white-1);
+}
+
+.contact-section h2 {
+    font-size: var(--font-size-large);
+    margin-bottom: var(--gutter-normal);
+}
+
+.contact-section p {
+    margin-bottom: var(--gutter-medium);
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-normal);
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: var(--font-size-small);
+}
+
+.contact-item img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(80%); /* Neutral color for icons */
+    transition: all 0.3s ease;
+}
+
+.contact-item img:hover {
+    filter: grayscale(0%) brightness(100%) saturate(2); /* Color pop on hover */
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: var(--white-1);
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: var(--pink); /* Highlight link on hover */
+}
+
