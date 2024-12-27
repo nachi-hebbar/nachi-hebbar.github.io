@@ -893,3 +893,162 @@ body:not(.user-is-tabbing) a:focus {
     color: var(--pink); /* Highlight link on hover */
 }
 
+/* Project section*/
+.projects-section {
+    padding: var(--gutter-huge) 0;
+    background-color: var(--black);
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: var(--font-size-large);
+    color: var(--white);
+    margin-bottom: var(--gutter-medium);
+}
+
+.projects-scroll {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter-medium);
+    overflow-x: auto;
+    padding: var(--gutter-small);
+    scrollbar-width: thin;
+    scrollbar-color: var(--pink) var(--white-1);
+}
+
+.projects-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.projects-scroll::-webkit-scrollbar-thumb {
+    background: var(--pink);
+    border-radius: 10px;
+}
+
+.projects-row {
+    display: flex;
+    gap: var(--gutter-medium);
+    justify-content: flex-start;
+}
+
+.project-card {
+    flex: 0 0 300px;
+    height: 400px;
+    perspective: 1000px; /* Adds depth for the 3D effect */
+    border-radius: 10px;
+    position: relative;
+    transform-style: preserve-3d; /* Ensures 3D transformation */
+    transition: transform 0.6s ease; /* Smooth flipping */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    cursor: pointer;
+
+
+}
+
+.project-card:hover {
+    transform: rotateY(180deg); /* Rotates the card on hover */
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Prevents the opposite side from showing */
+    border-radius: 10px;
+    padding: var(--gutter-small);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-wrap: break-word;
+    line-height: 1.6;
+}
+
+.card-front {
+    background: rgba(255, 50, 88, 0.8); /* Front background color */
+    z-index: 2; /* Ensures it's on top initially */
+    transform: rotateY(0deg); /* No rotation for front face */
+}
+
+.card-front img {
+    width: 100%;
+    height: auto;
+    max-height: 50%; /* Prevents the image from overtaking card space */
+    object-fit: cover; /* Ensures image scaling without distortion */
+    border-radius: 10px;
+    margin-bottom: var(--gutter-small);
+}
+
+.card-front h4 {
+    font-size: 1.6rem;
+    margin: var(--gutter-small) 0;
+    color: var(--white);
+}
+
+.card-front p {
+    font-size: 1.4rem;
+    color: var(--white-1);
+}
+
+.card-back {
+    background: rgba(0, 0, 0, 0.9); /* Back background color */
+    transform: rotateY(180deg); /* Position it behind initially */
+    z-index: 1; /* Starts behind the front side */
+}
+
+.card-back h3 {
+    font-size: var(--font-size-medium);
+    margin-bottom: var(--gutter-small);
+    color: var(--pink);
+}
+
+.card-back p {
+    font-size: 1.4rem;
+    margin-bottom: var(--gutter-small-1);
+    color: var(--white-1);
+}
+
+.card-back ul {
+    margin: var(--gutter-small) 0;
+    padding-left: 20px;
+    list-style-type: disc;
+    text-align: left;
+}
+
+.card-back ul li {
+    margin-bottom: 5px;
+    color: var(--white-1);
+}
+
+.card-back a {
+    margin-top: var(--gutter-small);
+    color: var(--pink);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.card-back a:hover {
+    color: var(--white);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .projects-row {
+        flex-wrap: wrap; /* Wraps cards to fit smaller screens */
+        justify-content: center;
+    }
+
+    .project-card {
+        flex: 0 0 90%; /* Cards occupy almost full width */
+    }
+}
+
+@media (max-width: 600px) {
+    .card-front img {
+        max-height: 40%; /* Reduce image size on smaller devices */
+    }
+}
